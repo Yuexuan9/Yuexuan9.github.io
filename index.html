@@ -66,6 +66,51 @@ I’m passionate about bringing AI into the physical world, and I love turning n
         <div style="display:flex;flex-direction: column;" id="research">
             <h1>Projects</h1>
             <div>
+    <a class="research-thumb">
+        <video width="320" autoplay loop muted playsinline
+               style="height: auto;">
+            <source src="assets/image/IMG_6286_under25MB.mp4"
+                    type="video/mp4">
+        </video>
+    </a>
+    <a class="research-proj-title">
+        S1 Mobile Manipulation — From Relative Actions to Robot Deployment
+    </a>
+    <p>
+        I developed the data processing and inference pipeline for mobile
+        manipulation on the S1 robot. I separated the mobile base's
+        (x, y, yaw) actions into a dedicated modality and converted absolute
+        odometry targets into normalized SE(2) actions relative to the current
+        base pose for policy training. During inference, I denormalized the
+        predicted actions and composed them with the current odometry pose
+        to recover absolute targets, then sent these targets to the base
+        controller in the ODOM frame.
+    </p>
+</div>
+
+<div>
+    <a class="research-thumb">
+        <video width="320" autoplay loop muted playsinline
+               style="height: auto;">
+            <source src="assets/image/DJI_20250726172801_0623_D_under25MB.mp4"
+                    type="video/mp4">
+        </video>
+    </a>
+    <a class="research-proj-title">
+        π0-Based Manipulation on Qinglong — Aviation Connector and Parcel Sorting
+    </a>
+    <p>
+        I worked on applying π0-based vision-language-action models to the
+        Qinglong humanoid robot, targeting industrial aviation connector
+        sorting and parcel sorting scenarios for WAIC and WRC. My work
+        included model training and evaluation, capability testing, and
+        failure analysis to support model selection and iterative improvement.
+        I also developed the inference pipeline and adapted it to the robot
+        platform, connecting data collection with deployment on the physical
+        robot.
+    </p>
+</div>
+            <div>
                 <a class="research-thumb">
                       <video width="320" height="auto" autoplay loop muted>
                           <source src="assets/image/4733.mp4" type="video/mp4">
