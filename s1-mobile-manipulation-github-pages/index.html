@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDSQMLZ3GJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LDSQMLZ3GJ');
+    </script> -->
+    <title> Yuexuan Li </title>
+    <link rel="icon" type="image/x-icon" href="assets/images/seas.ico">
+    <!-- S1 case-study entry: title, thumbnail, and description share one destination. -->
+    <style>
+        .s1-project-entry { position: relative; cursor: pointer; }
+        .s1-project-entry .s1-project-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+        .s1-project-entry:hover .s1-project-link { text-decoration: underline; text-underline-offset: 4px; }
+        .s1-project-entry:focus-within { outline: 2px solid #325e87; outline-offset: 6px; }
+    </style>
+</head>
+
+<body>
+    <div style="width:1000px;margin: 0px auto;">
+        <header id="header" width="400px" style="display:flex;justify-content: space-around;">
+            <a href="#profile-intro">Home</a>
+            <a href="#research">Academic Project</a>
+            <a href="#updates">Work Experience</a>
+            <a href="#updates">Activity</a>
+        </header>
+        <div id="profile">
+            <div id="profile-pic">
+                <img src="/assets/image/Imgblue.JPG" />
+                <p style="text-align:left;margin-top:-15px;">Picture taken by MEGA</p>
+            </div>
+            <div id="profile-intro">
+                <div id="profile-name">Yuexuan Li 李玥萱</div>
+                <div id="profile-email">yuexuanli15 at gmail dot com </div>
+                <p>
+                    Hi, I am Yuexuan Li! You can also call me Kiara.
+                </p>
+                <p>
+                    I’m currently an Algorithm Engineer at Humanoid Robot Co., Ltd. in Shanghai, and I hold a master’s degree from Columbia University. My work focuses on foundation models for robotics, particularly vision-language-action (VLA) models.
+
+I contribute to VLA model training and evaluation, using capability testing and failure analysis to guide model selection and improvement. I also develop robot inference pipelines and adapt them to different platforms, connecting data collection with deployment on real robots for robotic arm and mobile manipulation tasks.
+
+I’m passionate about bringing AI into the physical world, and I love turning new ideas into robots that can do useful things!
+                </p>
+
+                <div>
+
+                    <a href="https://www.linkedin.com/in/liyuexuan">
+                        LinkedIn
+                    </a>
+                    /
+
+                    <a href="https://github.com/Yuexuan9">
+                        Github
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        
+        <div class="divider"></div>
+        <div style="display:flex;flex-direction: column;" id="research">
+            <h1>Projects</h1>
+            <div class="s1-project-entry">
+    <a class="research-thumb" href="s1-mobile-manipulation/" aria-label="Explore the S1 Mobile Manipulation project">
+        <video width="320" autoplay loop muted playsinline
+               style="height: auto;">
+            <source src="assets/image/IMG_6286_under25MB.mp4"
+                    type="video/mp4">
+        </video>
+    </a>
+    <a class="research-proj-title s1-project-link" href="s1-mobile-manipulation/">
+        S1 Mobile Manipulation — From Relative Actions to Robot Deployment
+    </a>
+    <p>
+        I developed the data processing and inference pipeline for mobile
+        manipulation on the S1 robot. I separated the mobile base's
+        (x, y, yaw) actions into a dedicated modality and converted absolute
+        odometry targets into normalized SE(2) actions relative to the current
+        base pose for policy training. During inference, I denormalized the
+        predicted actions and composed them with the current odometry pose
+        to recover absolute targets, then sent these targets to the base
+        controller in the ODOM frame.
+    </p>
+</div>
+
+<div>
+    <a class="research-thumb">
+        <video width="320" autoplay loop muted playsinline
+               style="height: auto;">
+            <source src="assets/image/DJI_20250726172801_0623_D_under25MB.mp4"
+                    type="video/mp4">
+        </video>
+    </a>
+    <a class="research-proj-title">
+        π0-Based Manipulation on Qinglong — Aviation Connector and Parcel Sorting
+    </a>
+    <p>
+        I worked on applying π0-based vision-language-action models to the
+        Qinglong humanoid robot, targeting industrial aviation connector
+        sorting and parcel sorting scenarios for WAIC and WRC. My work
+        included model training and evaluation, capability testing, and
+        failure analysis to support model selection and iterative improvement.
+        I also developed the inference pipeline and adapted it to the robot
+        platform, connecting data collection with deployment on the physical
+        robot.
+    </p>
+</div>
+            <div>
+                <a class="research-thumb">
+                      <video width="320" height="auto" autoplay loop muted>
+                          <source src="assets/image/4733.mp4" type="video/mp4">
+                      </video>
+                </a>
+                <a class="research-proj-title">
+                  Visual Affordance — Robotic Pick and Place Tasks
+                </a>
+                <p>
+                  In this project, I explored the Visual Affordance method for visual robotic pack-and-place tasks. 
+                    I implemented and trained a Visual Affordance model with manually labeled data and used rotated heightmaps, 
+                    domain randomization, and self-supervision to improve the model's performance. We aimed to improve the 
+                    model's grasp success rate on unseen novel objects.
+                </p>
+            </div>
+            
+
+            <div>
+                <a class="research-thumb">
+                  <video width="320" height="auto" autoplay loop muted>
+                          <source src="assets/image/57.mp4" type="video/mp4">
+                      </video>
+                </a>
+                <a class="research-proj-title">
+                  Robot Design Project
+                </a>
+                <p>
+                    During this project, I applied Solidworks and Python to design and create a legged robot, covering conceptual design, detailed design, simulation and modeling, digital manufacturing, electronics, and sensor design. I used a 3D printer to print the body of my robot and optimized the gait in simulation and reality by Python.
+                </p>
+            </div>
+            
+            <div>
+                <a class="research-thumb">
+                  <img src="assets/image/IMG_3436.JPG" alt="">
+                </a>
+                <a class="research-proj-title">
+                  Design Project — Smart Signs
+                </a>
+                <p>
+                  Smart Signs is an exciting project that addresses a common frustration for commuters - the uncertainty of public transportation. Our team has developed a solution that replaces static subway signs with dynamic Smart Screens that can be remotely updated in real-time to reflect track maintenance and delays.
+                </p>
+                <p>
+                  Our team's project is an excellent example of the power of design thinking and collaboration. We identified an emerging human need and utilized new technology to create a product that addresses that need. We are proud to have made a solution that has the potential to improve the daily commute for countless individuals.
+                </p>
+            </div>
+
+            <div style="clear: both;"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="section" id="updates">
+            <h1>Experience</h1>
+            <ul>
+                <li> <b>Mar 2024 ～</b> Humanoid Robot Co., Ltd
+                <br /><i>Algorithm Engineer</i><br />
+                  <p>
+                    &bull; Keywords: Python, Imitation Learning, Simulation Environment
+                  </p>
+                <li> <b>Jul 2021 - Aug 2021</b> China Tower Corporation Limited
+                <br /><i>Internship</i><br />
+                  <p>
+                    &bull; Keywords: ANSYS, SolidWorks, Stress Analysis
+                  </p>
+            </ul>
+            <p></p>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="section" id="updates">
+            <h1>Education</h1>
+            <ul>
+                <li> <b>2022 - 2024</b> Columbia University
+                <br /><i>MS Mechanical Engineering</i><br />
+                  <p>
+                    &bull; Keywords: Robot, Artificial Intelligence
+                  </p>
+                <li> <b>2018 - 2022</b> Dalian University of Technology
+                <br /><i>BE Engineering Mechanics</i><br />
+                  <p>
+                    &bull; Keywords: Dynamics, Finite Element Analysis
+                  </p>
+            </ul>
+            <p></p>
+            <div style="clear: both;"></div>
+        </div>
+        <style>
+    .talks .talk-entry {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin: 16px 0 24px;
+        padding-left: 40px;
+        list-style: none;
+    }
+
+    .talks .talk-photo {
+        flex: 0 0 320px;
+    }
+
+    .talks .talk-photo img {
+        display: block;
+        width: 320px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+    }
+</style>
+
+<div class="divider"></div>
+<div class="section talks" id="updates">
+    <h1>Talks</h1>
+
+    <ul class="talk-entry">
+        <li class="talk-photo">
+            <a href="assets/image/iso-tc299-wg16-hangzhou-2026.jpg">
+                <img
+                    src="assets/image/iso-tc299-wg16-hangzhou-2026.jpg"
+                    alt="Group photo at the fifth ISO/TC 299/WG 16 meeting in Hangzhou"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                    style="object-position: center 65%;"
+                >
+            </a>
+        </li>
+        <li>
+            <b>October 19–21, 2026</b> Hangzhou, China
+            <br>
+            <i>Fifth Meeting of ISO/TC 299/WG 16</i>
+            <br>
+            <p>&bull; Participated as an expert</p>
+        </li>
+    </ul>
+
+    <ul class="talk-entry">
+        <li class="talk-photo">
+            <a href="assets/image/iso-tc299-wg16-london-2026.jpg">
+                <img
+                    src="assets/image/iso-tc299-wg16-london-2026.jpg"
+                    alt="Group photo at the fourth ISO/TC 299/WG 16 meeting in London"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                >
+            </a>
+        </li>
+        <li>
+            <b>June 9–11, 2026</b> London, United Kingdom
+            <br>
+            <i>Fourth Meeting of ISO/TC 299/WG 16</i>
+            <br>
+            <p>&bull; Participated as an expert</p>
+        </li>
+    </ul>
+
+    <ul class="talk-entry">
+        <li class="talk-photo">
+            <a href="assets/image/groupphoto.jpg">
+                <img
+                    src="assets/image/groupphoto.jpg"
+                    alt="Group photo at the robot simulation platforms talk in Shanghai"
+                    width="320"
+                    height="180"
+                    loading="lazy"
+                >
+            </a>
+        </li>
+        <li>
+            <b>September 21, 2025</b>
+            Automobile Innovation Port Conference Center, Shanghai
+            <br>
+            <i>Overview of Robot Simulation Platforms &amp; Practical Analysis of Isaac Lab</i>
+            <br>
+            <p>&bull; Invited guest speaker</p>
+        </li>
+    </ul>
+
+    <div style="clear: both;"></div>
+</div>
+        <div class="divider"></div>
+        <div class="section" id="updates">
+            <h1>Activity</h1>
+            <ul>
+                <li> <b>Sep 2020 - Jun 2021</b> Dalian University of Technology Overseas Exchange Association
+                <br /><i>Director of Research Department</i><br />
+                  <p>
+                    &bull; Led department members to conduct an investigation into development of domestic and foreign societies
+                  </p>
+               <li> <b>Sep 2019 - Jun 2020</b> Dalian University of Technology Students' Union
+               <br /><i>Vice Director of Rights and Interests Department</i><br />
+                  <p>
+                    &bull; Organized a wide range of activities on campus to provide students a platform to demonstrate personal abilities
+                  </p>
+                  <p>
+                    &bull; Led a team of 15 volunteers to edit and launch 14 issues of equity publications and 7 issues of equity popularization tweets, and received 40K+ viewership on WeChat
+                  </p>
+               <li> <b>Sep 2018 - Jun 2019</b> Dalian University of Technology Students' Union
+               <br /><i>Student Officer of Liaison Department</i><br />
+            </ul>
+            <p></p>
+            <div style="clear: both;"></div>
+        </div>
+        <!-- <div class="divider"></div>
+        <div style="display:flex;flex-direction: column;">
+            <h1>Projects</h1>
+            <div>
+                <a href="soft-creatures/index.html" class="research-thumb"><img
+                        src="soft-creatures/gifs/elizabeth-hickey-small.gif" alt=""></a>
+                <a href="soft-creatures/index.html" class="research-proj-title">Coevolution of Morphology and Policy
+                    Implicit Neural Functions</a>
+                <p>
+                    <b>Huy Ha</b><br>
+                    <a href="https://github.com/huy-ha/coevolving-neural-networks">Github</a>,
+                    <a href="soft-creatures/index.html">Website</a>
+                </p>
+            </div>
+            <div style="clear: both;"></div>
+        </div> -->
+    </div>
+    <!-- <script src="js/pixi.min.js"></script> -->
+    <!-- <script src="js/profile-pic.js"></script> -->
+</body>
+
+</html>
+
