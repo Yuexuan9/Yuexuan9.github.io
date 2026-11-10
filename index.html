@@ -17,6 +17,13 @@
     </script> -->
     <title> Yuexuan Li </title>
     <link rel="icon" type="image/x-icon" href="assets/images/seas.ico">
+    <!-- S1 case-study entry: title, thumbnail, and description share one destination. -->
+    <style>
+        .s1-project-entry { position: relative; cursor: pointer; }
+        .s1-project-entry .s1-project-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+        .s1-project-entry:hover .s1-project-link { text-decoration: underline; text-underline-offset: 4px; }
+        .s1-project-entry:focus-within { outline: 2px solid #325e87; outline-offset: 6px; }
+    </style>
 </head>
 
 <body>
@@ -65,15 +72,15 @@ I’m passionate about bringing AI into the physical world, and I love turning n
         <div class="divider"></div>
         <div style="display:flex;flex-direction: column;" id="research">
             <h1>Projects</h1>
-            <div>
-    <a class="research-thumb">
+            <div class="s1-project-entry">
+    <a class="research-thumb" href="s1-mobile-manipulation/" aria-label="Explore the S1 Mobile Manipulation project">
         <video width="320" autoplay loop muted playsinline
                style="height: auto;">
             <source src="assets/image/IMG_6286_under25MB.mp4"
                     type="video/mp4">
         </video>
     </a>
-    <a class="research-proj-title">
+    <a class="research-proj-title s1-project-link" href="s1-mobile-manipulation/">
         S1 Mobile Manipulation — From Relative Actions to Robot Deployment
     </a>
     <p>
