@@ -1,343 +1,158 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDSQMLZ3GJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-LDSQMLZ3GJ');
-    </script> -->
-    <title> Yuexuan Li </title>
-    <link rel="icon" type="image/x-icon" href="assets/images/seas.ico">
-    <!-- S1 case-study entry: title, thumbnail, and description share one destination. -->
-    <style>
-        .s1-project-entry { position: relative; cursor: pointer; }
-        .s1-project-entry .s1-project-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-        .s1-project-entry:hover .s1-project-link { text-decoration: underline; text-underline-offset: 4px; }
-        .s1-project-entry:focus-within { outline: 2px solid #325e87; outline-offset: 6px; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yuexuan Li — robotics algorithm engineer working on vision-language-action models, real-robot deployment, and evaluation.">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <title>Yuexuan Li</title>
+    <script src="assets/js/site.js" defer></script>
 </head>
-
 <body>
-    <div style="width:1000px;margin: 0px auto;">
-        <header id="header" width="400px" style="display:flex;justify-content: space-around;">
-            <a href="#profile-intro">Home</a>
-            <a href="#research">Academic Project</a>
-            <a href="#updates">Work Experience</a>
-            <a href="#updates">Activity</a>
-        </header>
-        <div id="profile">
+<div class="site-wrap">
+    <header id="header">
+        <nav class="main-nav" aria-label="Main navigation" data-zh-aria-label="主导航">
+            <a href="#profile" data-zh="首页">Home</a>
+            <a href="#research" data-zh="项目">Projects</a>
+            <a href="#experience" data-zh="工作经历">Experience</a>
+            <a href="#education" data-zh="教育经历">Education</a>
+            <a href="#talks" data-zh="会议与演讲">Talks</a>
+            <a href="#activity" data-zh="活动">Activity</a>
+        </nav>
+        <div class="language-switch" role="group" aria-label="Language" data-zh-aria-label="语言">
+            <button type="button" data-language="en" aria-pressed="true" lang="en">EN</button>
+            <button type="button" data-language="zh" aria-pressed="false" lang="zh-CN">中文</button>
+        </div>
+    </header>
+    <main>
+        <section id="profile" aria-labelledby="profile-name">
             <div id="profile-pic">
-                <img src="/assets/image/Imgblue.JPG" />
-                <p style="text-align:left;margin-top:-15px;">Picture taken by MEGA</p>
+                <img src="assets/image/Imgblue.JPG" alt="Yuexuan Li" data-zh-alt="李玥萱" width="400">
+                <p class="photo-credit" data-zh="摄影：MEGA">Picture taken by MEGA</p>
             </div>
             <div id="profile-intro">
-                <div id="profile-name">Yuexuan Li 李玥萱</div>
-                <div id="profile-email">yuexuanli15 at gmail dot com </div>
-                <p>
-                    Hi, I am Yuexuan Li! You can also call me Kiara.
-                </p>
-                <p>
-                    I’m currently an Algorithm Engineer at Humanoid Robot Co., Ltd. in Shanghai, and I hold a master’s degree from Columbia University. My work focuses on foundation models for robotics, particularly vision-language-action (VLA) models.
-
-I contribute to VLA model training and evaluation, using capability testing and failure analysis to guide model selection and improvement. I also develop robot inference pipelines and adapt them to different platforms, connecting data collection with deployment on real robots for robotic arm and mobile manipulation tasks.
-
-I’m passionate about bringing AI into the physical world, and I love turning new ideas into robots that can do useful things!
-                </p>
-
-                <div>
-
-                    <a href="https://www.linkedin.com/in/liyuexuan">
-                        LinkedIn
-                    </a>
-                    /
-
-                    <a href="https://github.com/Yuexuan9">
-                        Github
-                    </a>
-                    </a>
-                </div>
+                <h1 id="profile-name">Yuexuan Li 李玥萱</h1>
+                <div id="profile-email">yuexuanli15 at gmail dot com</div>
+                <p data-zh="你好，我是李玥萱，也可以叫我 Kiara！">Hi, I am Yuexuan Li! You can also call me Kiara.</p>
+                <p data-zh="我目前在上海人形机器人有限公司担任算法工程师，拥有哥伦比亚大学机械工程硕士学位。我的工作聚焦机器人基础模型，尤其是视觉–语言–动作（VLA）模型。">I’m currently an Algorithm Engineer at Humanoid Robot Co., Ltd. in Shanghai, and I hold a master’s degree from Columbia University. My work focuses on foundation models for robotics, particularly vision-language-action (VLA) models.</p>
+                <p data-zh="我参与 VLA 模型训练与评测，通过能力测试和失败分析支持模型选型与迭代优化；同时开发机器人推理链路并进行平台适配，贯通数据采集到真机部署的流程，推进机械臂与移动操作任务落地。">I contribute to VLA model training and evaluation, using capability testing and failure analysis to guide model selection and improvement. I also develop robot inference pipelines and adapt them to different platforms, connecting data collection with deployment on real robots for robotic arm and mobile manipulation tasks.</p>
+                <p data-zh="我热爱把 AI 带进真实世界，也享受将新想法变成机器人实际能力的过程！">I’m passionate about bringing AI into the physical world, and I love turning new ideas into robots that can do useful things!</p>
+                <div class="social-links"><a href="https://www.linkedin.com/in/liyuexuan">LinkedIn</a> / <a href="https://github.com/Yuexuan9">GitHub</a></div>
             </div>
-            <div style="clear: both;"></div>
-        </div>
-        
+        </section>
         <div class="divider"></div>
-        <div style="display:flex;flex-direction: column;" id="research">
-            <h1>Projects</h1>
-            <div class="s1-project-entry">
-    <a class="research-thumb" href="s1-mobile-manipulation/" aria-label="Explore the S1 Mobile Manipulation project">
-        <video width="320" autoplay loop muted playsinline
-               style="height: auto;">
-            <source src="assets/image/IMG_6286_under25MB.mp4"
-                    type="video/mp4">
-        </video>
-    </a>
-    <a class="research-proj-title s1-project-link" href="s1-mobile-manipulation/">
-        S1 Mobile Manipulation — From Relative Actions to Robot Deployment
-    </a>
-    <p>
-        I developed the data processing and inference pipeline for mobile
-        manipulation on the S1 robot. I separated the mobile base's
-        (x, y, yaw) actions into a dedicated modality and converted absolute
-        odometry targets into normalized SE(2) actions relative to the current
-        base pose for policy training. During inference, I denormalized the
-        predicted actions and composed them with the current odometry pose
-        to recover absolute targets, then sent these targets to the base
-        controller in the ODOM frame.
-    </p>
-</div>
-
-<div>
-    <a class="research-thumb">
-        <video width="320" autoplay loop muted playsinline
-               style="height: auto;">
-            <source src="assets/image/DJI_20250726172801_0623_D_under25MB.mp4"
-                    type="video/mp4">
-        </video>
-    </a>
-    <a class="research-proj-title">
-        π0-Based Manipulation on Qinglong — Aviation Connector and Parcel Sorting
-    </a>
-    <p>
-        I worked on applying π0-based vision-language-action models to the
-        Qinglong humanoid robot, targeting industrial aviation connector
-        sorting and parcel sorting scenarios for WAIC and WRC. My work
-        included model training and evaluation, capability testing, and
-        failure analysis to support model selection and iterative improvement.
-        I also developed the inference pipeline and adapted it to the robot
-        platform, connecting data collection with deployment on the physical
-        robot.
-    </p>
-</div>
-            <div>
-                <a class="research-thumb">
-                      <video width="320" height="auto" autoplay loop muted>
-                          <source src="assets/image/4733.mp4" type="video/mp4">
-                      </video>
+        <section id="research" aria-labelledby="projects-title">
+            <h1 id="projects-title" data-zh="项目">Projects</h1>
+            <div class="project-list">
+                <a class="project-card" href="s1-mobile-manipulation/" data-project="s1" data-project-link>
+                    <div class="research-thumb">
+                        <video width="320" height="180" autoplay loop muted playsinline preload="metadata" aria-label="S1 mobile manipulation demo" data-zh-aria-label="S1 移动操作演示">
+                            <source src="assets/image/IMG_6286_under25MB.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-copy">
+                        <h2 class="research-proj-title" data-zh="星尘 S1 移动操作——从相对动作到真机部署">S1 Mobile Manipulation — From Relative Actions to Robot Deployment</h2>
+                        <p data-zh="我开发了星尘 S1 移动操作的数据处理与推理链路，将底盘的 (x, y, yaw) 动作拆分为独立模态，并把绝对里程计目标转换为相对当前底盘位姿的 SE(2) 动作，经归一化后用于策略训练。推理时，对预测动作反归一化，与当前 ODOM 位姿复合还原为绝对目标，再下发给 ODOM 坐标系下的底盘控制器。">I developed the data processing and inference pipeline for mobile manipulation on the S1 robot. I separated the mobile base’s (x, y, yaw) actions into a dedicated modality and converted absolute odometry targets into normalized SE(2) actions relative to the current base pose for policy training. During inference, I denormalized the predicted actions and composed them with the current odometry pose to recover absolute targets, then sent these targets to the base controller in the ODOM frame.</p>
+                        <span class="project-more" data-zh="查看项目详情 →">View project details →</span>
+                    </div>
                 </a>
-                <a class="research-proj-title">
-                  Visual Affordance — Robotic Pick and Place Tasks
+                <a class="project-card" href="lm-x-cloth-folding/" data-project="lm-x" data-project-link>
+                    <div class="research-thumb">
+                        <video width="320" height="180" autoplay loop muted playsinline preload="metadata" poster="assets/video/astribot-fold-poster.jpg" aria-label="LM-X cloth folding on Astribot S1" data-zh-aria-label="LM-X 在星尘 S1 上的叠衣服演示">
+                            <source src="assets/video/astribot-fold.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-copy">
+                        <h2 class="research-proj-title" data-zh="LM-X × 星尘 S1——衣物折叠">LM-X on Astribot S1 — Cloth Folding</h2>
+                        <p data-zh="我负责 LM-X 视觉–语言–动作策略在星尘 S1 叠衣服任务上的训练、部署与评测，开展检查点对比、失败分析和真机执行链路排查。围绕 Value 进度估计的模型迭代与部署优化，我们的最终策略在论文的 20 次真机测试中完成 16 次任务，成功率为 80%。这项工作将模型训练、真机调试与系统评测连接起来。">I trained, deployed, and evaluated LM-X vision-language-action policies for cloth folding on Astribot S1. My work covered checkpoint comparison, failure analysis, and debugging the robot execution pipeline. Through model iterations incorporating Value-based progress estimation and deployment optimization, our final policy achieved 80% success (16/20) in the paper’s real-robot evaluation. This project connected model training with hands-on robot deployment and systematic evaluation.</p>
+                        <span class="project-more" data-zh="查看项目详情 →">View project details →</span>
+                    </div>
                 </a>
-                <p>
-                  In this project, I explored the Visual Affordance method for visual robotic pack-and-place tasks. 
-                    I implemented and trained a Visual Affordance model with manually labeled data and used rotated heightmaps, 
-                    domain randomization, and self-supervision to improve the model's performance. We aimed to improve the 
-                    model's grasp success rate on unseen novel objects.
-                </p>
+                <article class="project-card">
+                    <div class="research-thumb">
+                        <video width="320" height="180" autoplay loop muted playsinline preload="metadata" aria-label="Qinglong sorting demo" data-zh-aria-label="青龙分拣任务演示">
+                            <source src="assets/image/DJI_20250726172801_0623_D_under25MB.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-copy">
+                        <h2 class="research-proj-title" data-zh="基于 π0 的青龙人形机器人操作——工业航空插头与快递分拣">π0-Based Manipulation on Qinglong — Aviation Connector and Parcel Sorting</h2>
+                        <p data-zh="面向 WAIC、WRC 的真实场景，我参与将基于 π0 的 VLA 模型应用于青龙人形机器人的工业航空插头分拣与快递分拣。我的工作涵盖模型训练与评测、能力测试、失败分析，以及支持模型选型和迭代优化；同时开发推理链路并完成机器人平台适配，贯通数据采集与真机部署。">I worked on applying π0-based vision-language-action models to the Qinglong humanoid robot, targeting industrial aviation connector sorting and parcel sorting scenarios for WAIC and WRC. My work included model training and evaluation, capability testing, and failure analysis to support model selection and iterative improvement. I also developed the inference pipeline and adapted it to the robot platform, connecting data collection with deployment on the physical robot.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="research-thumb">
+                        <video width="320" height="180" autoplay loop muted playsinline preload="metadata" aria-label="Visual affordance pick and place demo" data-zh-aria-label="视觉可供性抓取与放置演示"><source src="assets/image/4733.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="project-copy">
+                        <h2 class="research-proj-title" data-zh="视觉可供性——机器人抓取与放置">Visual Affordance — Robotic Pick and Place Tasks</h2>
+                        <p data-zh="我探索了用于机器人视觉抓取与放置的 Visual Affordance 方法，使用人工标注数据实现并训练模型，并结合旋转高度图、域随机化和自监督来改进模型表现，目标是提高对未见物体的抓取成功率。">In this project, I explored the Visual Affordance method for visual robotic pick-and-place tasks. I implemented and trained a Visual Affordance model with manually labeled data and used rotated heightmaps, domain randomization, and self-supervision to improve the model’s performance. We aimed to improve the model’s grasp success rate on unseen objects.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="research-thumb">
+                        <video width="320" height="180" autoplay loop muted playsinline preload="metadata" aria-label="Legged robot design demo" data-zh-aria-label="足式机器人设计演示"><source src="assets/image/57.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="project-copy">
+                        <h2 class="research-proj-title" data-zh="机器人设计项目">Robot Design Project</h2>
+                        <p data-zh="我使用 SolidWorks 和 Python 设计并制作足式机器人，覆盖概念设计、详细设计、仿真建模、数字制造、电子与传感器设计。我通过 3D 打印制作机器人本体，并使用 Python 在仿真与实机中优化步态。">During this project, I applied SolidWorks and Python to design and create a legged robot, covering conceptual design, detailed design, simulation and modeling, digital manufacturing, electronics, and sensor design. I used a 3D printer to print the robot body and optimized its gait in simulation and on hardware using Python.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="research-thumb"><img src="assets/image/IMG_3436.JPG" alt="Smart Signs design project" data-zh-alt="Smart Signs 设计项目" width="320" height="180" loading="lazy"></div>
+                    <div class="project-copy">
+                        <h2 class="research-proj-title" data-zh="设计项目——Smart Signs 智能站牌">Design Project — Smart Signs</h2>
+                        <p data-zh="Smart Signs 致力于解决通勤者对公共交通信息不确定的困扰。团队设计了能够远程实时更新的动态屏幕，用以替代静态地铁站牌，及时展示线路维护和延误信息。">Smart Signs addresses a common frustration for commuters: uncertainty about public transportation. Our team developed a solution that replaces static subway signs with dynamic screens that can be remotely updated in real time to reflect track maintenance and delays.</p>
+                        <p data-zh="通过设计思维与团队协作，我们识别新出现的用户需求，并运用新技术提出有望改善日常通勤体验的方案。">Through design thinking and collaboration, we identified an emerging human need and used new technology to create a solution with the potential to improve the daily commute.</p>
+                    </div>
+                </article>
             </div>
-            
-
-            <div>
-                <a class="research-thumb">
-                  <video width="320" height="auto" autoplay loop muted>
-                          <source src="assets/image/57.mp4" type="video/mp4">
-                      </video>
-                </a>
-                <a class="research-proj-title">
-                  Robot Design Project
-                </a>
-                <p>
-                    During this project, I applied Solidworks and Python to design and create a legged robot, covering conceptual design, detailed design, simulation and modeling, digital manufacturing, electronics, and sensor design. I used a 3D printer to print the body of my robot and optimized the gait in simulation and reality by Python.
-                </p>
-            </div>
-            
-            <div>
-                <a class="research-thumb">
-                  <img src="assets/image/IMG_3436.JPG" alt="">
-                </a>
-                <a class="research-proj-title">
-                  Design Project — Smart Signs
-                </a>
-                <p>
-                  Smart Signs is an exciting project that addresses a common frustration for commuters - the uncertainty of public transportation. Our team has developed a solution that replaces static subway signs with dynamic Smart Screens that can be remotely updated in real-time to reflect track maintenance and delays.
-                </p>
-                <p>
-                  Our team's project is an excellent example of the power of design thinking and collaboration. We identified an emerging human need and utilized new technology to create a product that addresses that need. We are proud to have made a solution that has the potential to improve the daily commute for countless individuals.
-                </p>
-            </div>
-
-            <div style="clear: both;"></div>
-        </div>
+        </section>
         <div class="divider"></div>
-        <div class="section" id="updates">
-            <h1>Experience</h1>
-            <ul>
-                <li> <b>Mar 2024 ～</b> Humanoid Robot Co., Ltd
-                <br /><i>Algorithm Engineer</i><br />
-                  <p>
-                    &bull; Keywords: Python, Imitation Learning, Simulation Environment
-                  </p>
-                <li> <b>Jul 2021 - Aug 2021</b> China Tower Corporation Limited
-                <br /><i>Internship</i><br />
-                  <p>
-                    &bull; Keywords: ANSYS, SolidWorks, Stress Analysis
-                  </p>
+        <section class="section" id="experience">
+            <h1 data-zh="工作经历">Experience</h1>
+            <ul class="entry-list">
+                <li><b data-zh="2024 年 3 月至今">Mar 2024 – Present</b> <span data-zh="上海人形机器人有限公司">Humanoid Robot Co., Ltd.</span><br><i data-zh="算法工程师">Algorithm Engineer</i><p data-zh="• 关键词：VLA 模型训练与评测、真机部署、机器人推理链路">• Keywords: VLA Training &amp; Evaluation, Real-Robot Deployment, Robot Inference Pipelines</p></li>
+                <li><b data-zh="2021 年 7–8 月">Jul 2021 – Aug 2021</b> <span data-zh="中国铁塔股份有限公司">China Tower Corporation Limited</span><br><i data-zh="实习生">Internship</i><p data-zh="• 关键词：ANSYS、SolidWorks、应力分析">• Keywords: ANSYS, SolidWorks, Stress Analysis</p></li>
             </ul>
-            <p></p>
-            <div style="clear: both;"></div>
-        </div>
+        </section>
         <div class="divider"></div>
-        <div class="section" id="updates">
-            <h1>Education</h1>
-            <ul>
-                <li> <b>2022 - 2024</b> Columbia University
-                <br /><i>MS Mechanical Engineering</i><br />
-                  <p>
-                    &bull; Keywords: Robot, Artificial Intelligence
-                  </p>
-                <li> <b>2018 - 2022</b> Dalian University of Technology
-                <br /><i>BE Engineering Mechanics</i><br />
-                  <p>
-                    &bull; Keywords: Dynamics, Finite Element Analysis
-                  </p>
+        <section class="section" id="education">
+            <h1 data-zh="教育经历">Education</h1>
+            <ul class="entry-list">
+                <li><b>2022 – 2024</b> <span data-zh="哥伦比亚大学">Columbia University</span><br><i data-zh="机械工程硕士">MS Mechanical Engineering</i><p data-zh="• 关键词：机器人、人工智能">• Keywords: Robotics, Artificial Intelligence</p></li>
+                <li><b>2018 – 2022</b> <span data-zh="大连理工大学">Dalian University of Technology</span><br><i data-zh="工程力学学士">BE Engineering Mechanics</i><p data-zh="• 关键词：动力学、有限元分析">• Keywords: Dynamics, Finite Element Analysis</p></li>
             </ul>
-            <p></p>
-            <div style="clear: both;"></div>
-        </div>
-        <style>
-    .talks .talk-entry {
-        display: flex;
-        align-items: flex-start;
-        gap: 30px;
-        margin: 16px 0 24px;
-        padding-left: 40px;
-        list-style: none;
-    }
-
-    .talks .talk-photo {
-        flex: 0 0 320px;
-    }
-
-    .talks .talk-photo img {
-        display: block;
-        width: 320px;
-        height: 180px;
-        object-fit: cover;
-        object-position: center;
-    }
-</style>
-
-<div class="divider"></div>
-<div class="section talks" id="updates">
-    <h1>Talks</h1>
-
-    <ul class="talk-entry">
-        <li class="talk-photo">
-            <a href="assets/image/iso-tc299-wg16-hangzhou-2026.jpg">
-                <img
-                    src="assets/image/iso-tc299-wg16-hangzhou-2026.jpg"
-                    alt="Group photo at the fifth ISO/TC 299/WG 16 meeting in Hangzhou"
-                    width="320"
-                    height="180"
-                    loading="lazy"
-                    style="object-position: center 65%;"
-                >
-            </a>
-        </li>
-        <li>
-            <b>October 19–21, 2026</b> Hangzhou, China
-            <br>
-            <i>Fifth Meeting of ISO/TC 299/WG 16</i>
-            <br>
-            <p>&bull; Participated as an expert</p>
-        </li>
-    </ul>
-
-    <ul class="talk-entry">
-        <li class="talk-photo">
-            <a href="assets/image/iso-tc299-wg16-london-2026.jpg">
-                <img
-                    src="assets/image/iso-tc299-wg16-london-2026.jpg"
-                    alt="Group photo at the fourth ISO/TC 299/WG 16 meeting in London"
-                    width="320"
-                    height="180"
-                    loading="lazy"
-                >
-            </a>
-        </li>
-        <li>
-            <b>June 9–11, 2026</b> London, United Kingdom
-            <br>
-            <i>Fourth Meeting of ISO/TC 299/WG 16</i>
-            <br>
-            <p>&bull; Participated as an expert</p>
-        </li>
-    </ul>
-
-    <ul class="talk-entry">
-        <li class="talk-photo">
-            <a href="assets/image/groupphoto.jpg">
-                <img
-                    src="assets/image/groupphoto.jpg"
-                    alt="Group photo at the robot simulation platforms talk in Shanghai"
-                    width="320"
-                    height="180"
-                    loading="lazy"
-                >
-            </a>
-        </li>
-        <li>
-            <b>September 21, 2025</b>
-            Automobile Innovation Port Conference Center, Shanghai
-            <br>
-            <i>Overview of Robot Simulation Platforms &amp; Practical Analysis of Isaac Lab</i>
-            <br>
-            <p>&bull; Invited guest speaker</p>
-        </li>
-    </ul>
-
-    <div style="clear: both;"></div>
-</div>
+        </section>
         <div class="divider"></div>
-        <div class="section" id="updates">
-            <h1>Activity</h1>
-            <ul>
-                <li> <b>Sep 2020 - Jun 2021</b> Dalian University of Technology Overseas Exchange Association
-                <br /><i>Director of Research Department</i><br />
-                  <p>
-                    &bull; Led department members to conduct an investigation into development of domestic and foreign societies
-                  </p>
-               <li> <b>Sep 2019 - Jun 2020</b> Dalian University of Technology Students' Union
-               <br /><i>Vice Director of Rights and Interests Department</i><br />
-                  <p>
-                    &bull; Organized a wide range of activities on campus to provide students a platform to demonstrate personal abilities
-                  </p>
-                  <p>
-                    &bull; Led a team of 15 volunteers to edit and launch 14 issues of equity publications and 7 issues of equity popularization tweets, and received 40K+ viewership on WeChat
-                  </p>
-               <li> <b>Sep 2018 - Jun 2019</b> Dalian University of Technology Students' Union
-               <br /><i>Student Officer of Liaison Department</i><br />
-            </ul>
-            <p></p>
-            <div style="clear: both;"></div>
-        </div>
-        <!-- <div class="divider"></div>
-        <div style="display:flex;flex-direction: column;">
-            <h1>Projects</h1>
-            <div>
-                <a href="soft-creatures/index.html" class="research-thumb"><img
-                        src="soft-creatures/gifs/elizabeth-hickey-small.gif" alt=""></a>
-                <a href="soft-creatures/index.html" class="research-proj-title">Coevolution of Morphology and Policy
-                    Implicit Neural Functions</a>
-                <p>
-                    <b>Huy Ha</b><br>
-                    <a href="https://github.com/huy-ha/coevolving-neural-networks">Github</a>,
-                    <a href="soft-creatures/index.html">Website</a>
-                </p>
+        <section class="section talks" id="talks">
+            <h1 data-zh="会议与演讲">Talks</h1>
+            <div class="talk-list">
+                <article class="talk-entry">
+                    <a class="talk-photo" href="assets/image/iso-tc299-wg16-hangzhou-2026.jpg"><img src="assets/image/iso-tc299-wg16-hangzhou-2026.jpg" alt="Group photo at the fifth ISO/TC 299/WG 16 meeting in Hangzhou" data-zh-alt="ISO/TC 299/WG 16 杭州第五次会议合照" width="320" height="180" loading="lazy" style="object-position: center 65%;"></a>
+                    <div class="talk-copy"><b data-zh="2026 年 10 月 19–21 日">October 19–21, 2026</b> <span data-zh="中国杭州">Hangzhou, China</span><br><i><a href="https://sd.iso.org/meetings/surveys/a4ce44e5-463f-4272-bdb7-db4b372af222" data-zh="ISO/TC 299/WG 16 第五次会议">Fifth Meeting of ISO/TC 299/WG 16</a></i><p data-zh="• 以专家身份参会">• Participated as an expert</p></div>
+                </article>
+                <article class="talk-entry">
+                    <a class="talk-photo" href="assets/image/iso-tc299-wg16-london-2026.jpg"><img src="assets/image/iso-tc299-wg16-london-2026.jpg" alt="Group photo at the fourth ISO/TC 299/WG 16 meeting in London" data-zh-alt="ISO/TC 299/WG 16 伦敦第四次会议合照" width="320" height="180" loading="lazy"></a>
+                    <div class="talk-copy"><b data-zh="2026 年 6 月 9–11 日">June 9–11, 2026</b> <span data-zh="英国伦敦">London, United Kingdom</span><br><i><a href="https://sd.iso.org/documents/open/a103ed6a-97a0-4007-a1e7-37c5ea253f8c" data-zh="ISO/TC 299/WG 16 第四次会议">Fourth Meeting of ISO/TC 299/WG 16</a></i><p data-zh="• 以专家身份参会">• Participated as an expert</p></div>
+                </article>
+                <article class="talk-entry">
+                    <a class="talk-photo" href="assets/image/groupphoto.jpg"><img src="assets/image/groupphoto.jpg" alt="Group photo at the robot simulation platforms talk in Shanghai" data-zh-alt="上海机器人仿真平台演讲合照" width="320" height="180" loading="lazy"></a>
+                    <div class="talk-copy"><b data-zh="2025 年 9 月 21 日">September 21, 2025</b> <span data-zh="中国上海">Shanghai, China</span><br><i data-zh="机器人仿真平台概览与 Isaac Lab 实践分析">Overview of Robot Simulation Platforms &amp; Practical Analysis of Isaac Lab</i><p data-zh="• 特邀演讲嘉宾">• Invited guest speaker</p></div>
+                </article>
             </div>
-            <div style="clear: both;"></div>
-        </div> -->
-    </div>
-    <!-- <script src="js/pixi.min.js"></script> -->
-    <!-- <script src="js/profile-pic.js"></script> -->
+        </section>
+        <div class="divider"></div>
+        <section class="section" id="activity">
+            <h1 data-zh="活动">Activity</h1>
+            <ul class="entry-list">
+                <li><b data-zh="2020 年 9 月–2021 年 6 月">Sep 2020 – Jun 2021</b> <span data-zh="大连理工大学海外交流协会">Dalian University of Technology Overseas Exchange Association</span><br><i data-zh="调研部部长">Director of Research Department</i><p data-zh="• 带领部门成员调研国内外社团的发展情况">• Led department members to investigate the development of domestic and foreign societies</p></li>
+                <li><b data-zh="2019 年 9 月–2020 年 6 月">Sep 2019 – Jun 2020</b> <span data-zh="大连理工大学学生会">Dalian University of Technology Students’ Union</span><br><i data-zh="权益部副部长">Vice Director of Rights and Interests Department</i><p data-zh="• 组织多项校园活动，为同学展示个人能力提供平台">• Organized campus activities to give students a platform to demonstrate their abilities</p><p data-zh="• 带领 15 名志愿者编辑发布 14 期权益刊物、7 期权益普及推文，微信阅读量达 4 万以上">• Led 15 volunteers to publish 14 issues of equity publications and 7 WeChat articles, reaching 40K+ views</p></li>
+                <li><b data-zh="2018 年 9 月–2019 年 6 月">Sep 2018 – Jun 2019</b> <span data-zh="大连理工大学学生会">Dalian University of Technology Students’ Union</span><br><i data-zh="外联部干事">Student Officer of Liaison Department</i></li>
+            </ul>
+        </section>
+    </main>
+    <footer>Yuexuan Li · <a href="#profile" data-zh="返回顶部 ↑">Back to top ↑</a></footer>
+</div>
 </body>
-
 </html>
